@@ -1,0 +1,163 @@
+.voice-input-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.voice-input-modal {
+  background-color: var(--surface);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.voice-input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.voice-input-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: none;
+  font-size: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-input-content {
+  padding: 20px;
+}
+
+.voice-visualizer {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.voice-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: 4px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin: 0 auto 16px;
+  transition: all 0.3s;
+}
+
+.voice-circle.listening {
+  border-color: var(--danger-color);
+  background-color: rgba(255, 59, 48, 0.1);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.voice-status {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.voice-transcript {
+  margin-bottom: 20px;
+}
+
+.transcript-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: var(--background);
+  color: var(--text-primary);
+  resize: vertical;
+  font-family: inherit;
+}
+
+.error-message {
+  color: var(--danger-color);
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: rgba(255, 59, 48, 0.1);
+  border-radius: 8px;
+}
+
+.voice-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.voice-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.voice-btn.start {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.voice-btn.stop {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.voice-btn.save {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.voice-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.voice-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+

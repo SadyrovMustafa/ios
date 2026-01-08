@@ -1,0 +1,206 @@
+.auto-planning-panel {
+  padding: 20px;
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.auto-planning-panel.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 2000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.auto-planning-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.auto-planning-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: none;
+  font-size: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auto-planning-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.planning-settings {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.setting-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.setting-input {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+.planned-tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.planned-tasks-list h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.planned-task-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.planned-task-time {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  min-width: 60px;
+}
+
+.planned-task-content {
+  flex: 1;
+}
+
+.planned-task-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.planned-task-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.planned-task-priority {
+  display: flex;
+  align-items: center;
+}
+
+.priority-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.priority-high {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.priority-medium {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+.priority-low {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.planning-summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.summary-item span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.summary-item strong {
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.apply-plan-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+

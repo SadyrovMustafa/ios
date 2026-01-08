@@ -1,0 +1,190 @@
+.voice-command-panel {
+  padding: 20px;
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.voice-command-panel.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  z-index: 2000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.voice-command-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.voice-command-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: none;
+  font-size: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-command-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.not-supported {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+.voice-command-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.voice-start-btn,
+.voice-stop-btn {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.voice-start-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.voice-stop-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.voice-start-btn:hover,
+.voice-stop-btn:hover {
+  transform: scale(1.05);
+}
+
+.listening-indicator {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+.pulse-ring:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.pulse-ring:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.listening-indicator span {
+  position: relative;
+  z-index: 10;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.last-command {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.last-command h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.command-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.command-action {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.command-title,
+.command-query {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.voice-commands-help {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.voice-commands-help h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.voice-commands-help ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+

@@ -1,0 +1,76 @@
+.task-mention-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.task-mention-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+.mention-suggestions {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background-color: var(--background);
+}
+
+.suggestion-icon {
+  font-size: 16px;
+}
+
+.suggestion-name {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.mentions-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.mentions-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.mention-tag {
+  padding: 4px 8px;
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+

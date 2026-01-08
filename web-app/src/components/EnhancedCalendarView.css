@@ -1,0 +1,363 @@
+.enhanced-calendar-view {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calendar-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  min-width: 200px;
+  text-align: center;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: var(--surface);
+}
+
+.today-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.today-btn:hover {
+  opacity: 0.9;
+}
+
+.view-mode-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.mode-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--background);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mode-btn:hover {
+  background-color: var(--surface);
+}
+
+.mode-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.calendar-content {
+  min-height: 400px;
+}
+
+/* Month View */
+.calendar-month-view {
+  /* Reuse styles from CalendarView.css */
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: var(--surface);
+  border-color: var(--primary-color);
+}
+
+.calendar-day.today {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  opacity: 0.1;
+}
+
+.calendar-day.empty {
+  border: none;
+  background: transparent;
+  cursor: default;
+}
+
+.calendar-day-number {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.calendar-day-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.calendar-task-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.calendar-task-dot:hover {
+  transform: scale(1.5);
+}
+
+.calendar-task-more {
+  font-size: 10px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Week View */
+.calendar-week-view {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.week-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.week-day-header {
+  text-align: center;
+  padding: 12px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.week-day-name {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.week-day-number {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.week-day-number.today {
+  color: var(--primary-color);
+}
+
+.week-content {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  min-height: 400px;
+}
+
+.week-day-column {
+  background-color: var(--background);
+  border-radius: 8px;
+  padding: 8px;
+  min-height: 400px;
+}
+
+.week-task-item {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.week-task-item:hover {
+  border-color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+.task-time {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.task-title {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.task-priority-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Day View */
+.calendar-day-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.day-header {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.day-date {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.day-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-hour {
+  display: flex;
+  gap: 16px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hour-label {
+  min-width: 60px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.hour-tasks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-task {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timeline-task:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-task-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.timeline-task-notes {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .calendar-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .view-mode-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mode-btn {
+    flex: 1;
+  }
+
+  .week-content {
+    overflow-x: auto;
+    display: flex;
+  }
+
+  .week-day-column {
+    min-width: 200px;
+  }
+}
+

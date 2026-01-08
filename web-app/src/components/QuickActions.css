@@ -1,0 +1,99 @@
+.quick-actions {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  animation: slideUp 0.3s ease-out;
+}
+
+.quick-actions-content {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.selection-count {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.quick-actions-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.quick-action-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quick-action-btn:hover {
+  background-color: var(--surface);
+  transform: translateY(-1px);
+}
+
+.quick-action-btn-success {
+  background-color: var(--success-color);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.quick-action-btn-success:hover {
+  opacity: 0.9;
+}
+
+.quick-action-btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+  border-color: var(--danger-color);
+}
+
+.quick-action-btn-danger:hover {
+  opacity: 0.9;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-actions {
+    left: 0;
+    right: 0;
+    transform: none;
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  .quick-actions-content {
+    border-radius: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .quick-actions-buttons {
+    flex-wrap: wrap;
+  }
+}
+

@@ -1,0 +1,77 @@
+.checklist-in-notes {
+  margin: 12px 0;
+}
+
+.checklist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checklist-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checklist-text {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.checklist-text.checked {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.checklist-delete {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checklist-add {
+  display: flex;
+  gap: 8px;
+}
+
+.checklist-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.checklist-add-btn {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+

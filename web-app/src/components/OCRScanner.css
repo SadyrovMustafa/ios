@@ -1,0 +1,241 @@
+.ocr-scanner {
+  padding: 20px;
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.ocr-scanner.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 2000;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.ocr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.ocr-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: none;
+  font-size: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ocr-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ocr-upload-section {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.ocr-upload-section h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.upload-options {
+  display: flex;
+  gap: 12px;
+}
+
+.upload-btn,
+.camera-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.upload-btn:disabled,
+.camera-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.upload-btn:hover:not(:disabled),
+.camera-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.ocr-preview {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.ocr-preview h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.preview-image {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.ocr-processing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+.processing-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.ocr-result {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.ocr-result h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.result-text {
+  padding: 12px;
+  background-color: var(--surface);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.result-confidence {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.extracted-tasks {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.extracted-tasks h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-item {
+  padding: 10px;
+  background-color: var(--surface);
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-color);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.create-tasks-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.create-tasks-btn:hover {
+  opacity: 0.9;
+}
+
+.ocr-info {
+  padding: 12px;
+  background-color: rgba(var(--warning-color-rgb, 255, 149, 0), 0.1);
+  border-radius: 6px;
+  border-left: 3px solid var(--warning-color);
+}
+
+.ocr-info p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.ocr-info code {
+  background-color: var(--surface);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 11px;
+}
+

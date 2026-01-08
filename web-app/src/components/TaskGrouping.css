@@ -1,0 +1,57 @@
+.task-grouping {
+  width: 100%;
+}
+
+.grouping-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+.grouping-controls label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.grouping-select {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.grouped-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.task-group {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--surface);
+}
+
+.group-header {
+  margin: 0;
+  padding: 12px 16px;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.group-content {
+  padding: 8px;
+}
+

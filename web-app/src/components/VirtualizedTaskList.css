@@ -1,0 +1,10 @@
+.virtualized-list {
+  overflow-x: hidden;
+}
+
+.empty-tasks {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+

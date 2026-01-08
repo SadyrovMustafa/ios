@@ -1,0 +1,25 @@
+.gesture-handler {
+  position: relative;
+  touch-action: pan-y pan-x;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.gesture-handler * {
+  pointer-events: auto;
+}
+
+/* Visual feedback for long press (optional) */
+.gesture-handler.long-pressing {
+  opacity: 0.7;
+  transform: scale(0.98);
+  transition: all 0.1s;
+}
+
+/* Visual feedback for swipe (optional) */
+.gesture-handler.swiping {
+  transition: transform 0.1s;
+}
+

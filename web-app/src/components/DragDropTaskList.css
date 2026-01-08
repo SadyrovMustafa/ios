@@ -1,0 +1,33 @@
+.drag-drop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sortable-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.drag-handle {
+  cursor: grab;
+  color: var(--text-secondary);
+  font-size: 18px;
+  padding: 8px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.task-item-wrapper {
+  flex: 1;
+}
+

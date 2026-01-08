@@ -1,0 +1,242 @@
+.role-management-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.role-management-modal {
+  background-color: var(--surface);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.role-management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.role-management-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: none;
+  font-size: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-management-content {
+  padding: 20px;
+}
+
+.list-selector {
+  margin-bottom: 24px;
+}
+
+.list-selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+.permissions-section,
+.grant-permission-section {
+  margin-bottom: 24px;
+}
+
+.permissions-section h3,
+.grant-permission-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.permissions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.permission-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.permission-user {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.user-email {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.permission-role {
+  margin-right: 12px;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.role-owner {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+.role-admin {
+  background-color: rgba(75, 192, 192, 0.2);
+  color: rgb(75, 192, 192);
+}
+
+.role-editor {
+  background-color: rgba(54, 162, 235, 0.2);
+  color: rgb(54, 162, 235);
+}
+
+.role-viewer {
+  background-color: rgba(128, 128, 128, 0.2);
+  color: var(--text-secondary);
+}
+
+.grant-form {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.btn-primary,
+.btn-danger-small {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-danger-small {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-primary:hover:not(:disabled),
+.btn-danger-small:hover {
+  opacity: 0.9;
+}
+
+.roles-info {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.roles-info h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.roles-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.roles-list li {
+  margin-bottom: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+}
+

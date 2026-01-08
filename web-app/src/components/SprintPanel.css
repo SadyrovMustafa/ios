@@ -1,0 +1,310 @@
+.sprint-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.sprint-modal {
+  background-color: var(--surface);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sprint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sprint-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: none;
+  font-size: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprint-content {
+  padding: 20px;
+}
+
+.project-selector {
+  margin-bottom: 24px;
+}
+
+.project-selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-select,
+.form-input,
+.form-textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  width: 100%;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.sprint-actions {
+  margin-bottom: 16px;
+}
+
+.create-sprint-form {
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.sprints-list {
+  margin-bottom: 24px;
+}
+
+.sprints-list h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sprint-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--background);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+}
+
+.sprint-item:hover {
+  border-color: var(--primary-color);
+}
+
+.sprint-item.selected {
+  border-color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb, 0, 122, 255), 0.1);
+}
+
+.sprint-item-info h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sprint-dates {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.sprint-status {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.sprint-status-planned {
+  background-color: rgba(128, 128, 128, 0.2);
+  color: var(--text-secondary);
+}
+
+.sprint-status-active {
+  background-color: rgba(75, 192, 192, 0.2);
+  color: rgb(75, 192, 192);
+}
+
+.sprint-status-completed {
+  background-color: rgba(75, 192, 192, 0.2);
+  color: rgb(75, 192, 192);
+}
+
+.sprint-status-cancelled {
+  background-color: rgba(255, 99, 132, 0.2);
+  color: rgb(255, 99, 132);
+}
+
+.sprint-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.sprint-details {
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.sprint-details-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sprint-goal {
+  margin: 0 0 20px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.sprint-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: var(--surface);
+  border-radius: 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.sprint-tasks-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: var(--surface);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.task-item .completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.add-task-section {
+  margin-top: 12px;
+}
+
+.btn-primary,
+.btn-secondary-small {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-secondary-small {
+  background-color: var(--background);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-primary:hover,
+.btn-secondary-small:hover {
+  opacity: 0.9;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+}
+

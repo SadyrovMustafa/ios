@@ -1,0 +1,137 @@
+.tag-hierarchy-editor {
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.tag-hierarchy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.tag-hierarchy-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.create-tag-btn {
+  padding: 6px 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.create-tag-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--surface);
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.form-input {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.color-input {
+  width: 50px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.parent-select {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.save-btn {
+  padding: 8px;
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tags-tree {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tag-node {
+  margin-bottom: 8px;
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.tag-item:hover {
+  background-color: var(--surface);
+}
+
+.tag-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.tag-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.tag-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tag-delete-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+
